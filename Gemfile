@@ -49,6 +49,8 @@ gem 'fog-aws'
 
 gem 'devise', '~> 4.8', '>= 4.8.1'
 
+gem 'sinatra', '1.0'
+
 # gem 'geocoder'
 
 # Use Sass to process CSS
