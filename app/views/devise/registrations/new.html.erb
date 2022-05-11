@@ -1,0 +1,28 @@
+<h2 class="text-center" style="font-size: 5rem">Register</h2><br/><br/>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field form-group">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control bg-dark bg-opacity-75 text-success border-success", placeholder:"Email" %>
+  </div>
+  <br/><br/>
+
+  <div class="field form-group">
+    <%= f.password_field :password, autocomplete: "current-password", class:"form-control bg-dark bg-opacity-75 text-success border-success", placeholder:"Password (6 Characters Minimum)" %>
+  </div>
+  <br/><br/>
+
+  <div class="field form-group">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control bg-dark bg-opacity-75 text-success border-success", placeholder:"Confirm Password" %>
+  </div>
+  <br/><br/>
+
+  <div class="actions text-center">
+    <%= f.submit "Enter", class:"btn btn-lg btn-success" %>
+  </div><br/><br/><br/>
+
+  <div class="text-center">
+    Already have an account? <%= link_to "Sign-in", new_session_path(resource_name), class:"link-success" %>
+  </div>
+<% end %>

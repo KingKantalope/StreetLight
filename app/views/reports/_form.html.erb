@@ -1,0 +1,70 @@
+<%= form_with(model: report) do |form| %>
+  <% if report.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+        <% report.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <hr class="bg-success border-2 border-top border-success">
+
+  <div class="field form-group">
+    <%= form.datetime_field :time_occur, class:"form-control bg-dark bg-opacity-75 text-success border-success", placeholder:"Date and Time" %>
+  </div><br/>
+
+  <!-- Obtain from google maps integration (center of map) -->
+  <!--<div class="field form-group">
+    <%= form.text_field :latitude, class:"form-control" %>
+  </div>-->
+
+  <!--<div class="field form-group">
+    <%= form.text_field :longitude, class:"form-control" %>
+  </div>-->
+
+  <div class="field form-group">
+    <%= form.text_field :location, class:"form-control bg-dark bg-opacity-75 text-success border-success", placeholder:"Location" %>
+  </div>
+
+  <hr class="bg-success border-2 border-top border-success">
+
+  <!--Create buttons with script using comma delimiter-->
+  <!--<div class="field form-group">
+    <%= form.text_field :tags, class:"form-control" %>
+  </div>-->
+
+  <div>
+    <h1><strong>Tags</strong></h1>
+  </div>Buttons for tags go here!
+
+  <!-- Toggle buttons for tags, check tags string for which buttons need to be activated from the beginning, use similar script for index, add script to turn into string -->
+
+  <hr class="bg-success border-2 border-top border-success">
+
+  <div class="field form-group">
+    <%= form.text_area :description, class:"form-control bg-dark bg-opacity-75 text-success border-success", placeholder:"Description..." %>
+  </div>
+
+  <hr class="bg-success border-2 border-top border-success">
+
+  <!-- Active google map for location -->
+  <div>
+    <h4>MAP GOES HERE ONCE THAT IS FIGURED OUT</h4>
+  </div>
+
+  <hr class="bg-success border-2 border-top border-success">
+
+  <!-- Get user from session -->
+  <!--<div class="field form-group">
+    <%= form.label :user, style: "display: block" %>
+    <%= form.text_field :user, class:"form-control" %>
+  </div>-->
+
+  <div class="d-grid gap-2">
+    <%= form.submit class:"btn btn-outline-success btn-lg"%>
+  </div>
+<% end %>

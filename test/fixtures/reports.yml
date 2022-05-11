@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_occur: 2022-04-28 03:20:43
+  latitude: 9.99
+  longitude: 9.99
+  location: MyString
+  tags: MyString
+  description: MyText
+  user: MyString
+
+two:
+  time_occur: 2022-04-28 03:20:43
+  latitude: 9.99
+  longitude: 9.99
+  location: MyString
+  tags: MyString
+  description: MyText
+  user: MyString

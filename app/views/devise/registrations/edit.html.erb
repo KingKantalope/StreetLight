@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    document.title += " - Profile"
+  </script>
+</head>
+
+<p>
+  <br/>
+</p>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <!-- icon as button to change icon -->
+        icon goes here!
+      </div>
+      <div class="col-8">
+        <p class="fs-4">Username: <%= current_user.username %></p>
+        <p><div class="field form-group">
+          <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form-control bg-dark bg-opacity-75 text-success border-success", placeholder:"Name" %>
+        </div></p>
+      </div>
+    </div>
+    <div class="row">
+      <p><div class="field form-group">
+          <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number", class:"form-control bg-dark bg-opacity-75 text-success border-success", placeholder:"Phone Number: (XXX)XXX-XXXX" %>
+        </div></p>
+      <p class="fs-4">Email: <%= current_user.email %></p>
+    </div>
+    <div class="row">
+      <!-- BUDDY BUTTON -->
+    </div>
+    <div class="row">
+    </div>
+  </div>
+
+  <div class="actions"><center>
+    <%= f.submit "Update", class:"btn btn-outline-success btn-lg" %>
+  </center></div>
+<% end %>
+
+<hr class="bg-success border-2 border-top border-success">
+
+<h3><center>Debug Account</center></h3>
+
+<p><center><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-outline-success" %></center></p>
+
+</html>

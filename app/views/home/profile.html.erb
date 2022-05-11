@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+		document.title += " - Profile"
+	</script>
+</head>
+
+<p class="text-end fs-4">
+	<%= link_to "Edit Profile", edit_registration_path(current_user), class:"link-success" %>
+</p>
+
+<div class="container">
+	<div class="row">
+		<div class="col-4">
+			<!-- icon as button to change icon -->
+			icon goes here!
+		</div>
+		<div class="col-8 ">
+			<p class="fs-4"><strong>Username: <%= current_user.username %></strong></p>
+			<p class="fs-4"><strong>Name: </strong><%= current_user.name %></p>
+		</div>
+	</div>
+	<div class="row">
+		<p class="fs-4"><strong>Phone Number: </strong><%= current_user.phone_number %></p>
+		<p class="fs-4"><strong>Email: </strong><%= current_user.email %></p>
+	</div>
+	<hr class="bg-success border-2 border-top border-success">
+	<div class="row">
+		<div class="d-flex justify-content-center">
+			<!-- BUDDY BUTTON -->
+			<%= link_to "Sign-up to become a buddy", home_buddy_path , class:"btn btn-success fs-4" %>
+		</div>
+	</div>
+	<hr class="bg-success border-2 border-top border-success">
+	<div class="row">
+		<!-- Show user's reports -->
+	</div>
+</div>
+
+</html>

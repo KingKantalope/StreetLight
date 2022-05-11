@@ -1,0 +1,28 @@
+<h2 class="text-center" style="font-size: 5rem">Sign In</h2><br/><br/>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field form-group">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control bg-dark bg-opacity-75 text-success border-success", placeholder:"Email" %>
+  </div>
+  <br/><br/>
+
+  <div class="field form-group">
+    <%= f.password_field :password, autocomplete: "current-password", class:"form-control bg-dark bg-opacity-75 text-success border-success", placeholder:"Password" %>
+  </div>
+  <%= link_to "Forgot →", new_password_path(resource_name), class:"link-success" %><br/><br/>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field form-group">
+      <%= f.check_box :remember_me, class:"form-check-input border-success bg-dark", id:"rem_me" %>
+      <%= f.label :remember_me, class:"form-check-label", for:"rem_me" %>
+    </div><br/>
+  <% end %>
+
+  <div class="actions text-center">
+    <%= f.submit "Enter", class:"btn btn-lg btn-success" %>
+  </div><br/><br/><br/>
+
+  <div class="text-center">
+    Need an account? <%= link_to "Register", new_registration_path(resource_name), class:"link-success" %>
+  </div>
+<% end %>

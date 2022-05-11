@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<div id="<%= dom_id report %>">
+  <div class="card bg-dark bg-opacity-75 border-success">
+    <div class="card-body">
+      <div class="col">
+        <h5 class="card-title">
+          <%= report.time_occur.try(:strftime, '%m/%d/%Y') %>
+        </h5>
+        <p>
+          <%= report.tags %>
+        </p>
+        <%= link_to "", report, class:"stretched-link" %>
+      </div>
+      <div class="col">
+        <!-- Place icon here -->
+      </div>
+    </div>
+  </div>
+</div>

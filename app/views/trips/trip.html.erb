@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--This page needs to have buttons for:
+	Call Buddy
+	Fake Call
+	Make Report
+	Call 911
+	Then, add text: "Tell us where you're at and where you're going and we will help to get you there safely"
+	Then, two entry boxes: "From: " and "To: "
+	Then, button: "Start Trip"
+	Then, something with the map or whatever
+	-->
+<p>
+  <br/>
+</p>
+
+<div class="container">
+	<div class="row">
+		<div class="col-6 d-grid gap-2">
+			<%= link_to "Call Buddy", trips_buddy_path, class:"btn btn-success fs-4" %>
+			<%= link_to "Fake Call", trips_fakecall_path, class:"btn btn-success fs-4" %>
+			<%= link_to "File Report", new_report_path, class:"btn btn-success fs-4" %>
+		</div>
+		<div class="col-6 d-grid gap-2">
+			<button class="btn btn-success fs-1">Emergency: Call 911 Now</button>
+		</div>
+	</div>
+	<hr class="bg-success border-2 border-top border-success">
+	<div class="row">
+		<div class="col-1">
+		</div>
+		<div class="col-10">
+			<p class="fs-3 text-center">
+				Tell us where you are at and where you are going so that we can help to get you there safely
+			</p>
+		</div>
+		<div class="col-1">
+		</div>
+	</div>
+	<hr class="bg-success border-2 border-top border-success">
+	<div class="row">
+		<!-- forms for From: and To: -->
+		<div class="input-group mb-3">
+			<span class="input-group-text text-white bg-success border-success fs-4" id="basic-addon1">From:</span>
+			<input type="text" class="form-control bg-dark bg-opacity-75 text-success border-success fs-4" placeholder="Start" aria-label="Username" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group mb-3">
+			<span class="input-group-text text-white bg-success border-success fs-4" id="basic-addon1">To:</span>
+			<input type="text" class="form-control bg-dark bg-opacity-75 text-success border-success fs-4" placeholder="Destination" aria-label="Username" aria-describedby="basic-addon1">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-2">
+		</div>
+		<div class="col-8 d-grid gap-2">
+			<button class="btn btn-success fs-4">Start Trip</button>
+		</div>
+		<div class="col-2">
+		</div>
+	</div>
+	<hr class="bg-success border-2 border-top border-success">
+	<div class="row">
+		<p class="fs-1">Map</p>
+	</div>
+</div>

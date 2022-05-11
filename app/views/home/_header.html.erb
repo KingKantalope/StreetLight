@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+
+<nav class="nav fixed-bottom bg-dark justify-content-center navbar-custom">
+  <div class="row align-center">
+    <div class="col-4">
+      <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        <%= image_tag "Hamburger_icon.png", style:"width: 50%" %>
+      </button>
+    </div>
+    <div class="col-4">
+      <%= link_to image_tag("Report_icon.png", style:"width: 50%"), new_report_path, class:"btn btn-success" %>
+    </div>
+    <div class="col-4">
+      <%= link_to image_tag("Home_icon.png", style:"width: 50%"), trips_trip_path, class:"btn btn-success" %>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-start bg-dark text-success" style="" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-body">
+    <div class="container">
+      <div class="row" style="transform: rotate(0);">
+        <center>
+          <h1 style="font-size: 4rem">StreetLight</h1>
+          <%= image_tag "StreetLight_Logo.png", class:"img-fluid", style:"max-width: 50%" %>
+        </center>
+      </div>
+      <!-- Add Logo Here -->
+      <hr class="bg-success border-2 border-top border-success">
+      <div class="row" style="transform: rotate(0);">
+        <h1>Profile</h1><%= link_to "", home_profile_path, class:"stretched-link" %>
+      </div>
+      <hr class="bg-success border-2 border-top border-success">
+      <div class="row" style="transform: rotate(0);">
+        <h1>Live Map</h1><%= link_to "", home_livemap_path, class:"stretched-link" %>
+      </div>
+      <hr class="bg-success border-2 border-top border-success">
+      <div class="row" style="transform: rotate(0);">
+        <h1>Reports</h1><%= link_to "", reports_path, class:"stretched-link" %>
+      </div>
+      <hr class="bg-success border-2 border-top border-success">
+      <div class="row" style="transform: rotate(0);">
+        <h1>About Us</h1><%= link_to "", home_about_path, class:"stretched-link" %>
+      </div>
+        <!-- Sign up/in/out buttons -->
+      <div class="row">
+        <div class="col fixed-bottom mx-auto">
+          <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:"btn btn-success" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<h1>Reports</h1>
+<div id="reports">
+  <% @reports.each do |report| %>
+    <br/><%= render report %>
+  <% end %>
+</div>
+<br/>
+<%= link_to "File Report", new_report_path, class:"btn btn-outline-success btn-lg" %>
+<br/><br/><br/><br/>
